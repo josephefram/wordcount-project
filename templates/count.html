@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COUNT</title>
+</head>
+<body>
+
+<p> COUNT TIME </p>
+<p> There are {{ count }} words in your text </p>
+<a href="{% url 'home' %}"> Start again?</a>
+<p> This is your text: </p>
+    {{ fulltext }}
+
+    <p> Word Count:
+        <br/>
+        <br/>
+        {% for word, total in worddic %}
+        {{ word }} - {{ total }}
+        <br/>
+        {% endfor %}
+    <p/>
+
+</body>
+</html>
